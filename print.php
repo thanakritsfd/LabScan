@@ -12,18 +12,23 @@
     <title>LabPrint</title>
     <style>
         @page {
-            size: A4 landscape;
+            size: 55mm 28mm landscape;
             margin: 0;
+            padding-left: 3px;
+            orientation: landscape!important;
         }
 
         @media print {
             body {
                 transform: none !important;
                 transform-origin: none !important;
+                padding-left: 3px;
             }
 
             .page {
-                margin: 0;
+                padding-left: 3px;
+                width: 55mm;        /* Set the width of the content */
+                min-height: 28mm; 
                 border: initial;
                 border-radius: initial;
                 width: initial;
@@ -71,7 +76,7 @@
         .bottom p {
             margin: 0;
             padding: 0;
-            text-align: center;
+            text-align: left;
         }
 
         table {
